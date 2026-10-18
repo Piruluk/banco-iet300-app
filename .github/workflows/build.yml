@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Descargar código fuente
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Compilar con Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
@@ -21,7 +21,7 @@ jobs:
           buildozer_version: master
 
       - name: Subir el APK terminado
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: BancoIET300-APK
           path: ${{ steps.buildozer.outputs.filename }}
