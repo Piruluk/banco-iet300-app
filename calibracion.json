@@ -1,0 +1,23 @@
+{
+  "_nota": "BD de calibración del IET-300. E_teorico_GPa son valores de tabla; E_calibrado_GPa y las fuentes de ruido medidas se completan con los ensayos patrón del iPhone 15 Pro Max. Mientras E_calibrado_GPa sea null, la app compara contra el teórico.",
+  "version": "2026-10-17",
+
+  "materiales": [
+    {"nombre": "Acero",    "E_teorico_GPa": 200.0, "E_calibrado_GPa": null},
+    {"nombre": "Fierro",   "E_teorico_GPa": 211.0, "E_calibrado_GPa": null},
+    {"nombre": "Aluminio", "E_teorico_GPa": 69.0,  "E_calibrado_GPa": null}
+  ],
+
+  "frecuencias_parasitas": [
+    {"origen": "Red eléctrica 60 Hz y armónicos", "f_hz": 60.0, "armonicos": 10, "tol_hz": 1.0}
+  ],
+
+  "deteccion": {
+    "margen_E": 0.4,
+    "snr_min": 8.0,
+    "ratio_post_pre_min": 3.0,
+    "amplitud_min_impacto": 600,
+    "cresta_min_impacto": 12.0,
+    "duracion_analisis_s": 2.0
+  }
+}
